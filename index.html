@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Моё Портфолио</h1>
+    <p>Web Developer / SMM / Designer</p>
+    <a href="#contact" class="btn">Связаться</a>
+    <button onclick="toggleTheme()" class="theme-btn">Сменить тему</button>
+</header>
+
+<section class="about">
+    <img src="6d5dd716cf50f603b1132720bdabfad7.jpg">
+    <div>
+        <h2>Обо мне</h2>
+        <p>
+            Меня зовут Асема, я начинающий специалист в сфере веб-разработки, дизайна и SMM. 
+            Мне нравится создавать современные, минималистичные и удобные сайты, работать с визуалом, 
+            оформлением и контентом. Я изучаю HTML, CSS, основы программирования, графический дизайн 
+            и постоянно развиваю свои навыки в IT-сфере.
+
+            Мне интересно не просто создавать сайты, а делать их красивыми, удобными и понятными 
+            для пользователей. Я люблю аккуратный дизайн, минимализм, правильные цвета и композицию. 
+            Также мне нравится работать с графикой, редактировать изображения и оформлять контент 
+            для социальных сетей.
+
+            Я ответственный и креативный человек, люблю учиться новому, быстро осваиваю программы 
+            и стараюсь доводить любую работу до хорошего результата. В будущем я планирую развиваться 
+            в сфере веб-дизайна, фронтенд-разработки и digital-сферы.
+        </p>
+    </div>
+</section>
+
+<section class="workplace">
+    <h2>Моё рабочее место</h2>
+    <img src="e7be7a4c06e8206aea350bec7fd28c54.jpg">
+</section>
+
+<section class="projects">
+    <h2>Мои проекты</h2>
+    <div class="gallery">
+        <img src="1482278fe53ca27739135ab3ec259d1a.jpg">
+        <img src="8b5319fa65f5f5555c9d1e5c9b692919.jpg">
+        <img src="c1bceb45c8b7ea589566d6ac2783d4b9.jpg">
+        <img src="ed09bf34c12730fa2b9445ac617b36db.jpg">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Контакты</h2>
+    <div class="socials">
+        <img src="bed1f7141adb15f6762dde2e33ea653c.jpg">
+        <img src="c8dde26f40aa0b9ea5562ffef11f2536.jpg">
+        <img src="github.png">
+        <img src="d790ff28dab3ab8a09428b5592aaa52b.jpg">
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Моё портфолио</p>
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+    
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+}
+
+window.onload = function() {
+    if(localStorage.getItem("theme") == "dark"){
+        document.body.classList.add("dark");
+    }
+}
+</script>
+
+</body>
+</html>
